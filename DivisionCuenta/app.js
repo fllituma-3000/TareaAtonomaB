@@ -2,9 +2,9 @@ const form = document.getElementById('cuentaForm');
 const resultadoDiv = document.getElementById('resultado');
 form.addEventListener('submit', function(event) {
     event.preventDefault();
-    const subtotal = parseFloat(document.getElementById('subtotal').value);
-    const porcentajePropina = parseFloat(document.getElementById('propinaPorcentaje').value);
-    const numPersonas = parseInt(document.getElementById('personas').value);
+    const subtotal = Number(document.getElementById('subtotal').value);
+    const porcentajePropina = Number(document.getElementById('propinaPorcentaje').value);
+    const numPersonas = Number(document.getElementById('personas').value);
     const valorPropina = (subtotal * porcentajePropina) / 100;
     const totalConPropina = subtotal + valorPropina;
     const pagoPorPersona = totalConPropina / numPersonas;

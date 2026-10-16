@@ -2,7 +2,7 @@ const form = document.getElementById('tempForm');
 const resultadoDiv = document.getElementById('resultado');
 form.addEventListener('submit', function(event) {
     event.preventDefault();
-    const celsius = parseFloat(document.getElementById('celsius').value);
+    const celsius = Number(document.getElementById('celsius').value);
     const fahrenheit = (celsius * 9/5) + 32;
     const kelvin = celsius + 273.15;
     resultadoDiv.innerHTML = `
